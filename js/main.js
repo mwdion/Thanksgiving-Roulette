@@ -33,8 +33,8 @@ function create_tasks() {
 }
 
 function add_tasks_and_people_together() {
-	var rand_people_arr = _.shuffle(people_arr);
-	match_task_and_people = _.zip(rand_people_arr, task_arr);
+	var rand_task_arr = _.shuffle(task_arr);
+	match_task_and_people = _.zip(people_arr, rand_task_arr);
 	var combined_tasks_anad_people = _.object(match_task_and_people);
 	pick_turkey_pic();
 	var timer = setTimeout(function(){ 
